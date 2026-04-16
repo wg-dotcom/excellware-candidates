@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Excellware | Software Developer + Customer Support | Sagan Candidates</title>
+<title>Excellware | Software Developer + Customer Support | Sagan Shortlist</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -502,6 +502,38 @@ body {
   color: var(--accent);
 }
 
+/* ── Experience Timeline ── */
+.exp-list { display: flex; flex-direction: column; gap: 0; }
+
+.exp-item {
+  display: flex;
+  gap: 16px;
+  padding: 12px 0;
+}
+
+.exp-item:not(:last-child) { border-bottom: 1px solid #f3f4f6; }
+
+.exp-dot-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4px;
+}
+
+.exp-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid white;
+  box-shadow: 0 0 0 2px var(--primary);
+  flex-shrink: 0;
+}
+
+.exp-role { font-size: 14px; font-weight: 700; color: var(--text); }
+.exp-company { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+.exp-desc { font-size: 13px; color: #6b7280; margin-top: 4px; line-height: 1.55; }
+
 .action-row {
   display: flex;
   gap: 12px;
@@ -652,8 +684,8 @@ body {
       <thead>
         <tr>
           <th></th>
-          <th class="lead">Tobias Auzmendi 🇦🇷</th>
-          <th>Rian Oosthuizen 🇿🇦</th>
+          <th class="lead">Candidate A 🇦🇷</th>
+          <th>Candidate B 🇿🇦</th>
         </tr>
       </thead>
       <tbody>
@@ -677,16 +709,16 @@ body {
     <div class="candidate-header">
       <div class="candidate-rank lead">⭐ Lead Candidate</div>
       <div class="candidate-intro">
-        <div class="candidate-avatar">TA</div>
+        <div class="candidate-avatar">A</div>
         <div>
-          <div class="candidate-name">Tobias Auzmendi</div>
+          <div class="candidate-name">Candidate A</div>
           <div class="candidate-title">Full-Stack Web Developer · Argentina</div>
         </div>
       </div>
       <div class="candidate-meta">
         <div class="candidate-meta-item">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span class="candidate-meta-value">Rosario, Argentina</span>
+          <span class="candidate-meta-value">Argentina</span>
         </div>
         <div class="candidate-meta-item">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
@@ -700,10 +732,6 @@ body {
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           <span class="candidate-meta-value">UTC-3 · Full ET Overlap</span>
         </div>
-        <div class="candidate-meta-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <span class="candidate-meta-value">auzmendito@gmail.com</span>
-        </div>
       </div>
     </div>
 
@@ -715,14 +743,14 @@ body {
           Recruiter's Take
         </div>
         <div class="narrative">
-          Tobias is the closest match to the actual work Excellware needs done. He's been a freelance WordPress developer for four years and has shipped 10+ production websites from scratch. His daily toolkit is HTML5, CSS, JavaScript, PHP, jQuery, Bootstrap. He's comfortable in Node.js and Express for backend, and he's already working inside Git-based workflows. Because he runs his own freelance operation, he handles clients directly: domain and hosting setup, contact form configuration, SEO, Google Analytics, performance optimization, bug fixes. That client-facing muscle translates cleanly to phone and email support. Argentina sits at UTC-3, only two hours off US Eastern, so the 8am-5pm ET window is sustainable. At $2,000 he lands exactly on Benjy's target. The gap on paper is Java and C#, but his PHP and JavaScript OOP experience gives him the foundation to pick up BBj without starting from zero.
+          Candidate A is the closest match to the actual work Excellware needs done. He has been a freelance WordPress developer for four years and has shipped 10+ production websites from scratch. His daily toolkit is HTML5, CSS, JavaScript, PHP, jQuery, Bootstrap. He is comfortable in Node.js and Express for backend, and he is already working inside Git-based workflows. Because he runs his own freelance operation, he handles clients directly: domain and hosting setup, contact form configuration, SEO, Google Analytics, performance optimization, bug fixes. That client-facing muscle translates cleanly to phone and email support. Argentina sits at UTC-3, only two hours off US Eastern, so the 8am-5pm ET window is sustainable. At $2,000 he lands exactly on target. The gap on paper is Java and C#, but his PHP and JavaScript OOP experience gives him the foundation to pick up BBj without starting from zero.
         </div>
       </div>
 
       <div class="section">
         <div class="section-title">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-          Why Tobias
+          Why Candidate A
         </div>
         <ul class="why-list">
           <li class="why-item"><div class="why-dot"></div><span><strong>10+ production WordPress sites built from scratch.</strong> Real shipping experience. Not tutorials. Not coursework. Paying clients, live sites, ongoing maintenance.</span></li>
@@ -730,7 +758,7 @@ body {
           <li class="why-item"><div class="why-dot"></div><span><strong>Git workflows built in.</strong> Already part of how he works. No onboarding lift on version control.</span></li>
           <li class="why-item"><div class="why-dot"></div><span><strong>Client-facing freelance track record.</strong> Manages projects end-to-end, handles hosting and domain setup, implements analytics, performs performance tuning. Comfortable translating technical concepts for non-technical clients.</span></li>
           <li class="why-item"><div class="why-dot"></div><span><strong>Argentina time zone advantage.</strong> UTC-3 means a 2-hour offset from US Eastern. He can cover the full 8am-5pm ET workday without sacrificing his personal life. Sustainable long-term.</span></li>
-          <li class="why-item"><div class="why-dot"></div><span><strong>Formalizing the foundation.</strong> Currently pursuing a University Technical Degree in Programming at Universidad Tecnológica Nacional.</span></li>
+          <li class="why-item"><div class="why-dot"></div><span><strong>Formalizing the foundation.</strong> Currently pursuing a University Technical Degree in Programming at a national technological university.</span></li>
         </ul>
       </div>
 
@@ -797,26 +825,32 @@ body {
 
       <div class="section">
         <div class="section-title">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+          Experience Highlights
+        </div>
+        <div class="exp-list">
+          <div class="exp-item">
+            <div class="exp-dot-col"><div class="exp-dot"></div></div>
+            <div>
+              <div class="exp-role">Freelance Web Developer</div>
+              <div class="exp-company">Independent · 2020 - Present · 4+ Years</div>
+              <div class="exp-desc">Builds and maintains WordPress websites for small businesses and independent clients. Focus on responsive design, usability, and performance. Shipped 10+ custom WordPress websites from scratch using HTML5, CSS, JavaScript, and PHP. Implemented SEO, Google Analytics, and Search Console integrations. Configured contact forms, email systems, and domain/hosting environments. Performs ongoing bug fixes, visual adjustments, and performance optimizations to reduce load times and improve site stability. Works in Git-based source control and manages multiple concurrent client projects end-to-end.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
           Education
         </div>
         <div class="certs-list">
-          <div class="cert-badge">University Technical Degree in Programming (In Progress) · UTN</div>
-          <div class="cert-badge">IT-Oriented High School Diploma · Colegio Niño Jesús de Praga</div>
+          <div class="cert-badge">University Technical Degree in Programming (In Progress)</div>
+          <div class="cert-badge">IT-Oriented High School Diploma</div>
         </div>
       </div>
 
-    </div>
-
-    <div class="action-row">
-      <a href="https://prod-fillout-oregon-s3.s3.us-west-2.amazonaws.com/orgid-351357/flowpublicid-muLEdvKFhNus/4081ee6d-5ba5-4f9d-bd06-18b3cc3049c3-fcDZQYGNWgiHR7W1hlQ7p8pTyngdZcX34TI5t4dzvAAw9cO0gRXOuMjSl6y70Yej9CMcITIWvbpWItnw8IT7lk9HUo2QwoM7SUi/Tobias-Auzmendi---Wordpress-Developer---Resume.pdf" target="_blank" class="action-btn primary">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-        View Full Resume
-      </a>
-      <a href="https://www.linkedin.com/in/tobias-auzmendi/" target="_blank" class="action-btn secondary">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
-        LinkedIn
-      </a>
     </div>
   </div>
 
@@ -825,9 +859,9 @@ body {
     <div class="candidate-header">
       <div class="candidate-rank">Budget Alternative</div>
       <div class="candidate-intro">
-        <div class="candidate-avatar">RO</div>
+        <div class="candidate-avatar">B</div>
         <div>
-          <div class="candidate-name">Rian Oosthuizen</div>
+          <div class="candidate-name">Candidate B</div>
           <div class="candidate-title">Certified Developer · South Africa</div>
         </div>
       </div>
@@ -848,10 +882,6 @@ body {
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           <span class="candidate-meta-value">UTC+2 · 6-7hr from ET</span>
         </div>
-        <div class="candidate-meta-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <span class="candidate-meta-value">rianw1929@gmail.com</span>
-        </div>
       </div>
     </div>
 
@@ -863,14 +893,14 @@ body {
           Recruiter's Take
         </div>
         <div class="narrative">
-          Rian is the candidate who checks the OOP requirement directly. He holds Microsoft Exam 480 (Programming in HTML5 with JavaScript and CSS) and Microsoft Exam 761 (Querying Data with Transact-SQL). His programming background covers Java, C#, Python, and JavaScript. He completed a two-year Systems Development diploma at CTU Training Solutions covering web development, network architecture, relational database development, and programming ethics. His 2.5 years of freelance web development cover responsive sites, modern frameworks, and managing multiple concurrent projects. The machine technician experience at CTP Cartons and Labels is a hidden asset for Excellware: he maintained complex machinery, implemented preventive maintenance programs, documented systems, and trained junior technicians. That combination of systems thinking, documentation discipline, and team mentoring maps well to the DWC component documentation side of the role. He comes in at $1,200, which is $800 under Benjy's target, giving the team room to invest in BBj-specific ramp-up.
+          Candidate B is the candidate who checks the OOP requirement directly. He holds Microsoft Exam 480 (Programming in HTML5 with JavaScript and CSS) and Microsoft Exam 761 (Querying Data with Transact-SQL). His programming background covers Java, C#, Python, and JavaScript. He completed a two-year Systems Development diploma covering web development, network architecture, relational database development, and programming ethics. His 2.5 years of freelance web development cover responsive sites, modern frameworks, and managing multiple concurrent projects. The machine technician experience at a commercial packaging company is a hidden asset for Excellware: he maintained complex machinery, implemented preventive maintenance programs, documented systems, and trained junior technicians. That combination of systems thinking, documentation discipline, and team mentoring maps well to the DWC component documentation side of the role. He comes in at $1,200, which is $800 under target, giving the team room to invest in BBj-specific ramp-up.
         </div>
       </div>
 
       <div class="section">
         <div class="section-title">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-          Why Rian
+          Why Candidate B
         </div>
         <ul class="why-list">
           <li class="why-item"><div class="why-dot"></div><span><strong>OOP language credentials directly required by the JD.</strong> Java, C#, Python. Microsoft Exam 480 and Exam 761 certifications. Not tutorial-level. Formal credentials.</span></li>
@@ -878,7 +908,7 @@ body {
           <li class="why-item"><div class="why-dot"></div><span><strong>Systems Development diploma.</strong> Two-year program covering web development, network architecture, database development, and programming ethics. Structured technical foundation.</span></li>
           <li class="why-item"><div class="why-dot"></div><span><strong>MS Azure experience listed.</strong> Checks the beneficial-skills cloud box that AWS or other cloud experience also addresses.</span></li>
           <li class="why-item"><div class="why-dot"></div><span><strong>Documentation and training experience.</strong> In his machine technician role he trained junior technicians, documented preventive maintenance procedures, and collaborated with engineering to optimize machine performance.</span></li>
-          <li class="why-item"><div class="why-dot"></div><span><strong>$800 under budget.</strong> At $1,200 the team has meaningful room to invest in BBj training and onboarding without exceeding the $2,000 target.</span></li>
+          <li class="why-item"><div class="why-dot"></div><span><strong>$800 under budget.</strong> At $1,200 the team has meaningful room to invest in BBj training and onboarding without exceeding the target.</span></li>
         </ul>
       </div>
 
@@ -941,24 +971,50 @@ body {
 
       <div class="section">
         <div class="section-title">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+          Experience Highlights
+        </div>
+        <div class="exp-list">
+          <div class="exp-item">
+            <div class="exp-dot-col"><div class="exp-dot"></div></div>
+            <div>
+              <div class="exp-role">Freelance Web Developer</div>
+              <div class="exp-company">Independent · Mar 2023 - Sep 2025 · 2.5 Years</div>
+              <div class="exp-desc">Delivered responsive web projects for independent clients. Optimized site performance and reduced load times. Utilized modern frameworks to enhance user experience and functionality. Managed multiple concurrent projects while ensuring timely delivery.</div>
+            </div>
+          </div>
+          <div class="exp-item">
+            <div class="exp-dot-col"><div class="exp-dot"></div></div>
+            <div>
+              <div class="exp-role">Machine Technician</div>
+              <div class="exp-company">Commercial Packaging Company · Oct 2023 - Feb 2025</div>
+              <div class="exp-desc">Expertly maintained and repaired complex machinery, boosting uptime. Implemented preventive maintenance programs that reduced breakdowns. Trained and mentored junior technicians to enhance team efficiency. Collaborated with engineering to optimize machine performance and increase output. Developed documentation discipline applicable to technical component and process guides.</div>
+            </div>
+          </div>
+          <div class="exp-item">
+            <div class="exp-dot-col"><div class="exp-dot"></div></div>
+            <div>
+              <div class="exp-role">Waiter (Customer-Facing Role)</div>
+              <div class="exp-company">Restaurant Industry · Jun 2022 - Nov 2022</div>
+              <div class="exp-desc">Trained new staff and enhanced team performance and service quality. Managed high-volume tables and fostered customer relationships under pressure. Early professional exposure to direct customer communication and service delivery.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
           Education & Certifications
         </div>
         <div class="certs-list">
-          <div class="cert-badge">Systems Development Diploma · CTU Training Solutions (2020-2022)</div>
+          <div class="cert-badge">Systems Development Diploma (2020-2022)</div>
           <div class="cert-badge">MS Exam 480 · Programming in HTML5 with JavaScript and CSS</div>
           <div class="cert-badge">MS Exam 761 · Querying Data with Transact-SQL</div>
           <div class="cert-badge">Production Technology Short Course</div>
         </div>
       </div>
 
-    </div>
-
-    <div class="action-row">
-      <a href="https://prod-fillout-oregon-s3.s3.us-west-2.amazonaws.com/orgid-351357/flowpublicid-bhaY7J4vynus/67a2ffd1-bd08-4677-bc3b-624bc7c085a8-Jwx0952MhVXae3vEq9ruhPmsKxemDwrsaVUvIZJY1LAvpuDv5LFLWPUbACmSunvr9TW6vwYkIppHi8wSjoBMG1CsAQBel6OS1BV/CV-(1).pdf" target="_blank" class="action-btn primary">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-        View Full Resume
-      </a>
     </div>
   </div>
 
@@ -972,7 +1028,7 @@ body {
       </div>
     </div>
     <div class="recruiter-note-text">
-      Benjy, here's how I'd think about it. Tobias is the strongest match for the <em>work</em> Excellware needs done. He's been building and maintaining web applications every day for four years. His stack maps directly to the DWC refactor. His time zone makes the 8-5 ET schedule sustainable. At $2,000 he's exactly at your target. Rian is the strongest match for the <em>JD checklist</em>. He has the formal Java and C# credentials, database certifications, and Azure experience the brief calls out, at $1,200. The trade-off is volume of production work and a harder time zone. My honest recommendation is to start with Tobias. If the team wants to interview both, I can get them on calendars this week. Let me know which direction you want to take and I'll coordinate.
+      Here is how I'd think about it. Candidate A is the strongest match for the <em>work</em> Excellware needs done. He has been building and maintaining web applications every day for four years. His stack maps directly to the DWC refactor. His time zone makes the 8-5 ET schedule sustainable. At $2,000 he is exactly at your target. Candidate B is the strongest match for the <em>JD checklist</em>. He has the formal Java and C# credentials, database certifications, and Azure experience the brief calls out, at $1,200. The trade-off is volume of production work and a harder time zone. My honest recommendation is to start with Candidate A. If the team wants to interview both, I can get them on calendars this week. Let me know which direction you want to take and I will coordinate.
     </div>
   </div>
 
