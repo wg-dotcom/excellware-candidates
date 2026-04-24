@@ -608,6 +608,53 @@ body {
   color: var(--text);
 }
 
+/* ── Batch Tabs ── */
+.batch-tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 28px;
+  background: var(--surface);
+  padding: 8px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+}
+
+.batch-tab {
+  flex: 1;
+  padding: 14px 20px;
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.2s;
+  letter-spacing: 0.3px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.batch-tab:hover { color: var(--text); background: var(--warm); }
+
+.batch-tab.active {
+  color: white;
+  background: var(--primary);
+}
+
+.batch-tab-date {
+  display: block;
+  font-size: 10px;
+  font-weight: 600;
+  margin-top: 3px;
+  opacity: 0.75;
+  letter-spacing: 1px;
+}
+
+.batch-content { display: none; }
+.batch-content.active { display: block; }
+
 /* ── Footer ── */
 .footer {
   text-align: center;
@@ -676,6 +723,21 @@ body {
       Excellware is hiring an entry-level developer to join a three-person team refactoring a BBx character-based accounting system into a graphical web interface using the Dynamic Web Client features of BBj. The role combines hands-on front-end engineering with telephone and email support for customers navigating PC, networking, printing, and accounting questions. Required skills: an object-oriented language (Java or C#), HTML5/CSS/JavaScript, Git, and excellent documentation writing. Beneficial skills: Linux CLI, AWS, Business Basic languages, and accounting domain knowledge.
     </div>
   </div>
+
+  <!-- ═══ BATCH TABS ═══ -->
+  <div class="batch-tabs" role="tablist">
+    <button class="batch-tab active" data-target="batch-1" role="tab" aria-selected="true">
+      Batch 1
+      <span class="batch-tab-date">April 16, 2026</span>
+    </button>
+    <button class="batch-tab" data-target="batch-2" role="tab" aria-selected="false">
+      Batch 2
+      <span class="batch-tab-date">April 23, 2026</span>
+    </button>
+  </div>
+
+  <!-- ═══ BATCH 1 CONTENT ═══ -->
+  <div class="batch-content active" id="batch-1">
 
   <!-- ═══ COMPARISON TABLE ═══ -->
   <div class="compare-section">
@@ -1032,13 +1094,415 @@ body {
     </div>
   </div>
 
+  </div>
+  <!-- ═══ END BATCH 1 ═══ -->
+
+  <!-- ═══ BATCH 2 CONTENT ═══ -->
+  <div class="batch-content" id="batch-2">
+
+    <!-- ═══ BATCH 2 OVERVIEW ═══ -->
+    <div class="compare-section">
+      <div class="compare-title">Batch 2 · Two Roles, Two Candidates</div>
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th class="lead">David B. 🇻🇪</th>
+            <th>Faith C. 🇳🇬</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Role Lane</td><td>Full-Stack Developer</td><td>Customer Support</td></tr>
+          <tr><td>Monthly Rate (USD)</td><td><strong>$2,000</strong> (at budget)</td><td><strong>$2,400</strong> ($400 over budget)</td></tr>
+          <tr><td>Years of Experience</td><td>3+ years professional</td><td>5+ years enterprise CS</td></tr>
+          <tr><td>HTML5 / CSS / JavaScript</td><td><span class="check-mark">✓</span> Daily production use</td><td><span class="warn-mark">◐</span> Basic working knowledge</td></tr>
+          <tr><td>Frontend Frameworks</td><td><span class="check-mark">✓</span> React + vanilla JS</td><td><span class="x-mark">—</span></td></tr>
+          <tr><td>CMS / E-commerce</td><td><span class="check-mark">✓</span> WordPress, Elementor, Shopify, WooCommerce</td><td><span class="x-mark">—</span></td></tr>
+          <tr><td>Backend Fundamentals</td><td><span class="check-mark">✓</span> Node.js, Express, REST APIs</td><td><span class="x-mark">—</span></td></tr>
+          <tr><td>Server / Infrastructure</td><td><span class="check-mark">✓</span> VPS, GridPane, Cloudflare</td><td><span class="x-mark">—</span></td></tr>
+          <tr><td>CRM Platforms</td><td><span class="x-mark">—</span></td><td><span class="check-mark">✓</span> Dynamics 365, Zendesk, Salesforce, Jira</td></tr>
+          <tr><td>Enterprise Support (phone / email / chat)</td><td><span class="warn-mark">◐</span> Freelance client management</td><td><span class="check-mark">✓</span> 5+ years multi-channel</td></tr>
+          <tr><td>Team Leadership</td><td><span class="x-mark">—</span></td><td><span class="check-mark">✓</span> Managed teams of 12-20</td></tr>
+          <tr><td>Time Zone vs US Eastern</td><td><span class="check-mark">✓</span> UTC-4 (1-hour gap)</td><td><span class="warn-mark">◐</span> UTC+1 (5-6 hour gap)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ═══ DAVID CANDIDATE CARD ═══ -->
+    <div class="candidate-card">
+      <div class="candidate-header">
+        <div class="candidate-rank lead">⭐ Developer Lane</div>
+        <div class="candidate-intro">
+          <div class="candidate-avatar">D</div>
+          <div>
+            <div class="candidate-name">David Bocaranda</div>
+            <div class="candidate-title">Full-Stack Web Developer · Venezuela</div>
+          </div>
+        </div>
+        <div class="candidate-meta">
+          <div class="candidate-meta-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span class="candidate-meta-value">Venezuela</span>
+          </div>
+          <div class="candidate-meta-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+            <span class="candidate-meta-value">3+ Years Professional Dev</span>
+          </div>
+          <div class="candidate-meta-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+            <span class="candidate-meta-value">$2,000 USD/mo</span>
+          </div>
+          <div class="candidate-meta-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span class="candidate-meta-value">UTC-4 · Full ET Overlap</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="candidate-body">
+
+        <div class="section">
+          <div class="section-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            Recruiter's Take
+          </div>
+          <div class="narrative">
+            David is a full-stack developer from Venezuela with 3+ years of professional experience building and maintaining WordPress, Shopify, and custom web applications. His technical expertise spans frontend development (HTML5, CSS3, JavaScript, React), CMS platforms (WordPress/Elementor, WooCommerce, Shopify), backend fundamentals (Node.js, Express, REST APIs), and server infrastructure management (VPS, GridPane, Cloudflare). He has worked across multiple roles including freelance development and agency positions at Sting Agency and Radar Web Agency, delivering projects for clients across the U.S. and Latin America with a portfolio including live commercial websites. He demonstrates strong problem-solving abilities and a systematic approach to development challenges, evidenced by his detailed responses about mobile responsiveness issues, performance optimization, and quality assurance processes. David shows clear communication skills and project management awareness, emphasizing early problem identification and solution-focused team collaboration. His combination of technical depth, practical experience, and professional communication makes him a well-rounded developer candidate seeking remote opportunities at $2,000 monthly.
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Why David
+          </div>
+          <ul class="why-list">
+            <li class="why-item"><div class="why-dot"></div><span><strong>3+ years of professional full-stack delivery.</strong> Not tutorials or coursework. WordPress, Shopify, and custom web applications shipped to paying clients across the U.S. and Latin America.</span></li>
+            <li class="why-item"><div class="why-dot"></div><span><strong>Full technical range.</strong> HTML5, CSS3, JavaScript, React on the front end. Node.js, Express, and REST APIs on the back end. Infrastructure fluency with VPS, GridPane, and Cloudflare.</span></li>
+            <li class="why-item"><div class="why-dot"></div><span><strong>Agency + freelance exposure.</strong> Held roles at Sting Agency and Radar Web Agency in addition to independent client work. Translation: comfortable in both structured team environments and self-directed delivery.</span></li>
+            <li class="why-item"><div class="why-dot"></div><span><strong>Quality and process awareness.</strong> Systematic responses on mobile responsiveness, performance optimization, and QA workflows. Not just writes code, thinks about how it ships and holds up.</span></li>
+            <li class="why-item"><div class="why-dot"></div><span><strong>Client-ready communication.</strong> Project management awareness, early problem identification, solution-focused team collaboration. Maps cleanly onto the customer-facing side of this role.</span></li>
+            <li class="why-item"><div class="why-dot"></div><span><strong>Venezuela time zone advantage.</strong> UTC-4, just one hour off US Eastern. Full 8am-5pm ET overlap without sacrificing his personal schedule.</span></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <div class="section-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Fit for This Role
+          </div>
+          <div class="fit-grid">
+            <div class="fit-card">
+              <div class="fit-card-label">Web GUI Refactoring</div>
+              <div class="fit-card-value">React + HTML5/CSS/JS daily. Direct analog to the BBj Dynamic Web Client work Excellware needs.</div>
+            </div>
+            <div class="fit-card">
+              <div class="fit-card-label">Backend + Infrastructure</div>
+              <div class="fit-card-value">Node.js, Express, REST APIs, plus VPS, GridPane, Cloudflare. Comfortable up and down the stack, not just the visual layer.</div>
+            </div>
+            <div class="fit-card">
+              <div class="fit-card-label">Time Zone Alignment</div>
+              <div class="fit-card-value">UTC-4 puts him one hour off ET. Full workday overlap. Sustainable schedule long-term.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+            Strength Profile
+          </div>
+          <div class="bars-grid">
+            <div class="bar-item"><div class="bar-top"><span class="bar-label">HTML5 / CSS / JavaScript</span><span class="bar-score">92</span></div><div class="bar-track"><div class="bar-fill" style="width:92%"></div></div></div>
+            <div class="bar-item"><div class="bar-top"><span class="bar-label">React</span><span class="bar-score">85</span></div><div class="bar-track"><div class="bar-fill" style="width:85%"></div></div></div>
+            <div class="bar-item"><div class="bar-top"><span class="bar-label">WordPress / Shopify</span><span class="bar-score">94</span></div><div class="bar-track"><div class="bar-fill" style="width:94%"></div></div></div>
+            <div class="bar-item"><div class="bar-top"><span class="bar-label">Node.js / Express / REST APIs</span><span class="bar-score">80</span></div><div class="bar-track"><div class="bar-fill" style="width:80%"></div></div></div>
+            <div class="bar-item"><div class="bar-top"><span class="bar-label">Server / Infrastructure</span><span class="bar-score">82</span></div><div class="bar-track"><div class="bar-fill" style="width:82%"></div></div></div>
+            <div class="bar-item"><div class="bar-top"><span class="bar-label">Java / C# (OOP)</span><span class="bar-score">40</span></div><div class="bar-track"><div class="bar-fill" style="width:40%"></div></div></div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+            Platforms & Tools
+          </div>
+          <div class="tools-cluster">
+            <span class="tool-tag highlight">HTML5</span>
+            <span class="tool-tag highlight">CSS3</span>
+            <span class="tool-tag highlight">JavaScript</span>
+            <span class="tool-tag highlight">React</span>
+            <span class="tool-tag highlight">Node.js</span>
+            <span class="tool-tag highlight">Express</span>
+            <span class="tool-tag highlight">REST APIs</span>
+            <span class="tool-tag">WordPress</span>
+            <span class="tool-tag">Elementor</span>
+            <span class="tool-tag">WooCommerce</span>
+            <span class="tool-tag">Shopify</span>
+            <span class="tool-tag">VPS</span>
+            <span class="tool-tag">GridPane</span>
+            <span class="tool-tag">Cloudflare</span>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+            Experience Highlights
+          </div>
+          <div class="exp-list">
+            <div class="exp-item">
+              <div class="exp-dot-col"><div class="exp-dot"></div></div>
+              <div>
+                <div class="exp-role">Full-Stack Developer</div>
+                <div class="exp-company">Sting Agency · Agency Role</div>
+                <div class="exp-desc">Delivered WordPress, Shopify, and custom web applications for agency clients. Managed front-end and back-end work end-to-end, including performance optimization, mobile responsiveness, and QA processes.</div>
+              </div>
+            </div>
+            <div class="exp-item">
+              <div class="exp-dot-col"><div class="exp-dot"></div></div>
+              <div>
+                <div class="exp-role">Web Developer</div>
+                <div class="exp-company">Radar Web Agency · Agency Role</div>
+                <div class="exp-desc">Built and maintained production websites for U.S. and Latin American clients. Collaborated with cross-functional teams on CMS implementations, infrastructure management, and ongoing site reliability.</div>
+              </div>
+            </div>
+            <div class="exp-item">
+              <div class="exp-dot-col"><div class="exp-dot"></div></div>
+              <div>
+                <div class="exp-role">Freelance Full-Stack Developer</div>
+                <div class="exp-company">Independent · Ongoing</div>
+                <div class="exp-desc">Direct client work on WordPress, Shopify, and custom builds. Handles project management, mobile responsiveness, performance tuning, and quality assurance. Portfolio includes live commercial websites across multiple industries.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="action-row">
+        <a class="action-btn primary" href="https://prod-fillout-oregon-s3.s3.us-west-2.amazonaws.com/orgid-351357/flowpublicid-muLEdvKFhNus/fe31c80d-fdc1-4ec6-b280-7c6219722f71-1rUy7IXtYuieRyNB98Xlpg4ipjKUFsGgwy0FsJ5tUz4ao2ozGK5es4l4mcSZRaCVdcSMPyjmL656tkuQcOIy9QLWbb4hS81DV8d/CV_David_Bocaranda_FullStack_EN.pdf" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          View Resume
+        </a>
+        <a class="action-btn secondary" href="https://pub-320f624a298145c09bbf1003b5cf0a27.r2.dev/uploads/2a7fedb6-6825-44b8-8122-80180186c71b" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+          Watch Intro Video
+        </a>
+      </div>
+    </div>
+
+    <!-- ═══ FAITH CANDIDATE CARD ═══ -->
+    <div class="candidate-card">
+      <div class="candidate-header">
+        <div class="candidate-rank">Customer Support Lane</div>
+        <div class="candidate-intro">
+          <div class="candidate-avatar">F</div>
+          <div>
+            <div class="candidate-name">Faith Chiazor</div>
+            <div class="candidate-title">Enterprise Customer Support Specialist · Nigeria</div>
+          </div>
+        </div>
+        <div class="candidate-meta">
+          <div class="candidate-meta-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span class="candidate-meta-value">Nigeria</span>
+          </div>
+          <div class="candidate-meta-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+            <span class="candidate-meta-value">5+ Years Enterprise CS</span>
+          </div>
+          <div class="candidate-meta-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+            <span class="candidate-meta-value">$2,400 USD/mo</span>
+          </div>
+          <div class="candidate-meta-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span class="candidate-meta-value">UTC+1 · 5-6hr from ET</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="candidate-body">
+
+        <div class="section">
+          <div class="section-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            Recruiter's Take
+          </div>
+          <div class="narrative">
+            Faith is a customer service professional with over five years of experience supporting enterprise clients across multiple channels including phone, email, and live chat. Her technical foundation includes proficiency with Microsoft Dynamics 365, Zendesk, Salesforce, and Jira, along with basic knowledge of HTML, CSS, and JavaScript. She has demonstrated versatility through roles as a Subject Matter Expert for Microsoft 365, Event Tech Specialist, and Customer Support Team Lead, where she managed teams of 12-20 members while maintaining performance metrics. Her communication style emphasizes empathy and clear explanation of technical concepts to non-technical audiences. Faith currently operates as an independent contractor at $1,800 monthly and is targeting $2,400 monthly for her next move.
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Why Faith
+          </div>
+          <ul class="why-list">
+            <li class="why-item"><div class="why-dot"></div><span><strong>5+ years of enterprise-grade customer support.</strong> Phone, email, and live chat, all at once. Not junior-level ticket handling.</span></li>
+            <li class="why-item"><div class="why-dot"></div><span><strong>Deep CRM toolkit.</strong> Microsoft Dynamics 365, Zendesk, Salesforce, and Jira. She has worked inside the systems a support function actually runs on.</span></li>
+            <li class="why-item"><div class="why-dot"></div><span><strong>Microsoft 365 Subject Matter Expert.</strong> Technical domain depth, not just a generalist agent. Paired with her Event Tech Specialist role, she is comfortable explaining technical topics to non-technical users.</span></li>
+            <li class="why-item"><div class="why-dot"></div><span><strong>Team leadership at scale.</strong> Managed teams of 12-20 as a Customer Support Team Lead while holding performance metrics. Has the structure to grow into a supervisory role if needed.</span></li>
+            <li class="why-item"><div class="why-dot"></div><span><strong>Baseline web literacy.</strong> Knows HTML, CSS, and JavaScript at a working level. Means she can read a ticket, open a dev tools panel, and have a real conversation with the engineering side of the team.</span></li>
+            <li class="why-item"><div class="why-dot"></div><span><strong>Empathy-driven communication.</strong> Emphasis on clear explanation to non-technical audiences. The exact posture Excellware needs for customers navigating PC, networking, printing, and accounting questions.</span></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <div class="section-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Fit for This Role
+          </div>
+          <div class="fit-grid">
+            <div class="fit-card">
+              <div class="fit-card-label">Multi-Channel Support</div>
+              <div class="fit-card-value">Phone, email, and live chat across enterprise clients. Direct fit for the customer-facing side of the Excellware role.</div>
+            </div>
+            <div class="fit-card">
+              <div class="fit-card-label">Technical Explanation</div>
+              <div class="fit-card-value">Microsoft 365 SME + Event Tech background. Comfortable translating technical answers for customers navigating PC, networking, and printing questions.</div>
+            </div>
+            <div class="fit-card">
+              <div class="fit-card-label">Leadership Ceiling</div>
+              <div class="fit-card-value">Has led teams of 12-20 while hitting metrics. Scales beyond an individual contributor seat if Excellware's support function grows.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+            Strength Profile
+          </div>
+          <div class="bars-grid">
+            <div class="bar-item"><div class="bar-top"><span class="bar-label">Multi-Channel CS (Phone / Email / Chat)</span><span class="bar-score">93</span></div><div class="bar-track"><div class="bar-fill" style="width:93%"></div></div></div>
+            <div class="bar-item"><div class="bar-top"><span class="bar-label">CRM Platforms</span><span class="bar-score">90</span></div><div class="bar-track"><div class="bar-fill" style="width:90%"></div></div></div>
+            <div class="bar-item"><div class="bar-top"><span class="bar-label">Microsoft 365 / Office Tools</span><span class="bar-score">88</span></div><div class="bar-track"><div class="bar-fill" style="width:88%"></div></div></div>
+            <div class="bar-item"><div class="bar-top"><span class="bar-label">Team Leadership</span><span class="bar-score">85</span></div><div class="bar-track"><div class="bar-fill" style="width:85%"></div></div></div>
+            <div class="bar-item"><div class="bar-top"><span class="bar-label">Technical Translation</span><span class="bar-score">82</span></div><div class="bar-track"><div class="bar-fill" style="width:82%"></div></div></div>
+            <div class="bar-item"><div class="bar-top"><span class="bar-label">HTML / CSS / JavaScript (basic)</span><span class="bar-score">48</span></div><div class="bar-track"><div class="bar-fill" style="width:48%"></div></div></div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+            Platforms & Tools
+          </div>
+          <div class="tools-cluster">
+            <span class="tool-tag highlight">Microsoft Dynamics 365</span>
+            <span class="tool-tag highlight">Zendesk</span>
+            <span class="tool-tag highlight">Salesforce</span>
+            <span class="tool-tag highlight">Jira</span>
+            <span class="tool-tag highlight">Microsoft 365</span>
+            <span class="tool-tag">HTML</span>
+            <span class="tool-tag">CSS</span>
+            <span class="tool-tag">JavaScript (basic)</span>
+            <span class="tool-tag">Phone Support</span>
+            <span class="tool-tag">Email Support</span>
+            <span class="tool-tag">Live Chat</span>
+            <span class="tool-tag">Event Technology</span>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+            Experience Highlights
+          </div>
+          <div class="exp-list">
+            <div class="exp-item">
+              <div class="exp-dot-col"><div class="exp-dot"></div></div>
+              <div>
+                <div class="exp-role">Independent Customer Support Contractor</div>
+                <div class="exp-company">Remote · Current</div>
+                <div class="exp-desc">Operates as an independent contractor delivering multi-channel customer support at $1,800 monthly. Seeking growth into a $2,400 monthly seat with more scope.</div>
+              </div>
+            </div>
+            <div class="exp-item">
+              <div class="exp-dot-col"><div class="exp-dot"></div></div>
+              <div>
+                <div class="exp-role">Customer Support Team Lead</div>
+                <div class="exp-company">Enterprise Support Function</div>
+                <div class="exp-desc">Managed teams of 12-20 agents while maintaining performance metrics. Owned escalations, coaching, and performance accountability. Built processes alongside handling customer work.</div>
+              </div>
+            </div>
+            <div class="exp-item">
+              <div class="exp-dot-col"><div class="exp-dot"></div></div>
+              <div>
+                <div class="exp-role">Subject Matter Expert · Microsoft 365</div>
+                <div class="exp-company">Enterprise Support Function</div>
+                <div class="exp-desc">Deep domain support for Microsoft 365 customers across phone, email, and live chat. Translated technical concepts for non-technical audiences. Acted as escalation point for frontline agents.</div>
+              </div>
+            </div>
+            <div class="exp-item">
+              <div class="exp-dot-col"><div class="exp-dot"></div></div>
+              <div>
+                <div class="exp-role">Event Tech Specialist</div>
+                <div class="exp-company">Event Technology Support</div>
+                <div class="exp-desc">Supported live event technology environments, including real-time issue resolution under pressure. Strengthened technical literacy and calm-under-fire communication habits.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="action-row">
+        <a class="action-btn primary" href="https://prod-fillout-oregon-s3.s3.us-west-2.amazonaws.com/orgid-351357/flowpublicid-bpGNU8k9pous/2e64ac4e-4af8-4d96-9d9b-f1ff679f4ad9-m9NscXnmThRk1KC1YYWcfJu5qdXYrhQOpawupgBEqepjEJJfwMX6bSCzWszCgdK0aso4AARFxuC5t3F2V0A2TrLV8GRfJWdsfVW/Faithy's-Resume.pdf" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          View Resume
+        </a>
+        <a class="action-btn secondary" href="https://pub-320f624a298145c09bbf1003b5cf0a27.r2.dev/uploads/f15683d8-d04e-4721-8f48-0482815bebaf" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+          Watch Intro Video
+        </a>
+      </div>
+    </div>
+
+    <!-- ═══ BATCH 2 RECRUITER NOTE ═══ -->
+    <div class="recruiter-note">
+      <div class="recruiter-note-header">
+        <div class="recruiter-note-avatar">JP</div>
+        <div>
+          <div class="recruiter-note-name">Jesus Pacheco</div>
+          <div class="recruiter-note-role">Head of Revenue, Sagan</div>
+        </div>
+      </div>
+      <div class="recruiter-note-text">
+        Batch 2 takes a different angle. Instead of two devs going head-to-head, this is one candidate per lane. David covers the full-stack engineering seat directly, at target rate, with a time zone that matches US Eastern almost one-to-one. Faith covers the customer support lane with depth you rarely see at this level: five years of enterprise CS, real CRM fluency, Microsoft 365 SME credentials, and team lead experience. She's $400 above the original $2,000 target, so there's a budget decision to make. If the role is truly dev-first with support as a secondary duty, David alone is the cleanest answer. If the support volume is heavier than the JD suggests, Faith is a strong standalone hire or a natural pair with David. Happy to get either on a call this week. Let me know how you want to sequence it.
+      </div>
+    </div>
+
+  </div>
+  <!-- ═══ END BATCH 2 ═══ -->
+
   <!-- Footer -->
   <div class="footer">
-    Prepared by <strong>Jesus Pacheco</strong> · Head of Revenue, Sagan · April 16, 2026<br>
+    Prepared by <strong>Jesus Pacheco</strong> · Head of Revenue, Sagan · Updated April 23, 2026<br>
     <a href="https://getsagan.com">getsagan.com</a> · jesus.p@getsagan.com
   </div>
 
 </div>
+
+<script>
+  document.querySelectorAll('.batch-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.target;
+      document.querySelectorAll('.batch-tab').forEach(t => {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      document.querySelectorAll('.batch-content').forEach(c => c.classList.remove('active'));
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+      document.getElementById(target).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+</script>
 
 </body>
 </html>
